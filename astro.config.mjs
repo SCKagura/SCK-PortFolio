@@ -21,13 +21,17 @@ import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
 import vercel from '@astrojs/vercel/serverless'
 
+import netlify from '@astrojs/netlify'
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://fuwari.vercel.app/',
   base: '/',
   trailingSlash: 'always',
   output: 'server',
-  adapter: vercel(),
+  adapter: netlify({
+    edgeMiddleware: true,
+  }),
 
   integrations: [
     tailwind({
