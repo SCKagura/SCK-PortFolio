@@ -23,10 +23,10 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sckagura.github.io',
-  base: 'my-repo',
+  site: 'https://fuwari.vercel.app/',
+  base: '/',
   trailingSlash: 'always',
-  output: 'static',
+  output: 'server',
   adapter: vercel(),
 
   integrations: [
