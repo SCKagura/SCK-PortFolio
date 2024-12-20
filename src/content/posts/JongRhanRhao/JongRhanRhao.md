@@ -103,7 +103,9 @@ To ensure a secure and robust application, the following measures are implemente
  ![FrontEnd Design1](FrontendDesign1.png) 
 
 
- <!-- ![FrontEnd Design2](FrontendDesign2.png)  -->
+
+
+ ![FrontEnd Design2](FrontendDesign2.png) 
  --- 
 
  ### **Project Code** 
