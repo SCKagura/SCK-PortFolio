@@ -7,7 +7,7 @@ import type {
 import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
-  title: 'AutsadaWiriya',
+  title: 'SCKagura',
   subtitle: 'Profile',
   lang: 'en',         // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
   themeColor: {
@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: false,
-    src: 'assets/images/demo-banner.png',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: 'assets/images/SCK_LABLAB-Photo.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: false,         // Display the credit text of the banner image
@@ -40,43 +40,55 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.About,
     // {
     //   name: 'GitHub',
-    //   url: 'https://github.com/AutsadaWiriya',     // Internal links should not include the base path, as it is automatically added
+    //   url: 'https://github.com/sckagura',     // Internal links should not include the base path, as it is automatically added
     //   external: true,                               // Show an external link icon and will open in a new tab
     // },
+    {
+      name: 'Mail to me' ,
+      url:'mailto:skagura9164@gmail.com?subject=Contact&body=Hello',
+      external: true ,
+
+    },
   ],
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/imgAutsadaWiriya.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-  name: 'Autsada Wiriya',
-  bio: "Hi, I'm Autsada Wiriya, a Computer Engineering student at Chiang Mai University. I'm passionate about technology and always eager to learn new things.",
+  avatar: 'assets/images/SCK_LABLAB-Photo.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  name: 'Boonyawut Buthboon',
+  bio: "Hi, I'm Boonyawut Buthboon, a Computer Engineering student at Chiang Mai University. I'm passionate about technology and always eager to learn new things.",
   links: [
-    // {
-    //   name: 'Twitter',
-    //   icon: 'fa6-brands:twitter',       // Visit https://icones.js.org/ for icon codes
-    //                                     // You will need to install the corresponding icon set if it's not already included
-    //                                     // `pnpm add @iconify-json/<icon-set-name>`
-    //   url: 'https://twitter.com',
-    // },
-    // {
-    //   name: 'Steam',
-    //   icon: 'fa6-brands:steam',
-    //   url: 'https://store.steampowered.com',
-    // },
     {
       name: 'Facebook',
-      icon: 'fa6-brands:facebook',
-      url: 'https://www.facebook.com/AutsadaWiriya',
+      icon: 'fa6-brands:facebook',       // Visit https://icones.js.org/ for icon codes
+                                        // You will need to install the corresponding icon set if it's not already included
+                                        // `pnpm add @iconify-json/<icon-set-name>`
+      url: 'https://www.facebook.com/bywbb.boss/',
     },
     {
       name: 'Instagram',
       icon: 'fa6-brands:instagram',
-      url: 'https://www.instagram.com/autsaa_',
+      url: 'https://www.instagram.com/bywbboss/',
     },
+    
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/AutsadaWiriya',
+      url: 'https://github.com/sckagura',
+    },
+    {
+      name: 'LinkedIn', 
+      icon: 'fa6-brands:linkedin', 
+      url: 'https://www.linkedin.com/in/boonyawut-buthboon-0a8308339/', 
+    },
+    {
+      name: 'TikTok',
+      icon: 'fa6-brands:tiktok',
+      url: 'https://www.tiktok.com/@12chopwesc',
+    },
+    {
+      name: 'Steam',
+      icon: 'fa6-brands:steam',
+      url: 'https://steamcommunity.com/profiles/76561199131490321/',
     },
   ],
 }
