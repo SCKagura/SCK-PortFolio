@@ -100,7 +100,8 @@ To ensure a secure and robust application, the following measures are implemente
 ![Database Schema](Database_Schema.png)
 
  ### **5. FrontEnd Design** 
- ![FrontEnd Design1](FrontendDesign1.png)(FrontendDesign2.png) 
+ ![FrontEnd Design1](FrontendDesign1.png)
+ ![FED2](FED2.png)
  --- 
 
  ### **Project Code** 
