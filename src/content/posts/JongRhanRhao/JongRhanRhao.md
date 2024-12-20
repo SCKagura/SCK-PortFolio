@@ -7,7 +7,7 @@ tags: ["Web Development", "Full Stack", "Backend", "Frontend", "Authentication",
 category: Projects
 draft: false
 ---
-
+<!-- 
 
 ## 🎯 **Project Overview**
 The Jongrhanrhao project is a full-stack web application showcasing advanced features such as authentication, real-time communication, and database management. It integrates modern technologies for both frontend and backend to deliver a seamless user experience.
@@ -109,4 +109,4 @@ To ensure a secure and robust application, the following measures are implemente
 
 
 ## 📝 **Conclusion**
-The Jongrhanrhao project demonstrates the integration of modern full-stack technologies to build a scalable and efficient web application. Its modular backend, dynamic frontend, and robust security features make it a strong foundation for future developments.
+The Jongrhanrhao project demonstrates the integration of modern full-stack technologies to build a scalable and efficient web application. Its modular backend, dynamic frontend, and robust security features make it a strong foundation for future developments. -->
