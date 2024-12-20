@@ -1,74 +1,113 @@
 ---
-title: Translate IT!
-published: 2023-05-17
-description: 'A quiz game to translate English words into Thai meanings.'
-image: 'Translate_it_uistart.png'
-tags: [Projects, Game]
-category: 'Projects'
+title: Jongrhanrhao 
+description: "A comprehensive showcase of the Jongrhanrhao project, including team, technologies, backend architecture, database schema, authentication, and security considerations."
+image: "JongRhanRhao_ProfilePic.png"
+tags: ["Web Development", "Full Stack", "Backend", "Frontend", "Authentication", "Security"]
+category: Projects
 draft: false
+published: 2024-10-18
 ---
 
-## Translate IT! - A Fun Translation Quiz Game 🎮
-
-### Objective
-**Translate IT!** is an interactive quiz game designed to test and improve vocabulary by translating English words into their correct Thai meanings. The game presents a word along with its type (e.g., adjective, noun), followed by four multiple-choice options. Players must select the correct Thai translation for each word. The objective is to challenge your language skills and increase familiarity with both English and Thai vocabularies.
-
----
-
-## Game Screenshots
-
-### Game Start UI
-<!-- ![Game Start](Translate_it_uistart.png) -->
-The user interface when the game begins, offering a clean and simple design to start the quiz.
-
-### Options Screen
-<!-- ![Options Screen](Translate_it_options.png) -->
-This screen provides various options, allowing users to adjust settings or proceed with the game.
-
-### Answer Screen
-<!-- ![Answer Screen](Translate_it_answer.png) -->
-The answer screen shows the word, type, and available options, where players select their answers.
+## 🎯 **Project Overview**
+The Jongrhanrhao project is a full-stack web application showcasing advanced features such as authentication, real-time communication, and database management. It integrates modern technologies for both frontend and backend to deliver a seamless user experience.
 
 ---
 
-## Question Example
+## 🧑‍💻 **Team Members**
 
-Here’s a sample question to give you a better understanding of the game format:
-
-- **Word**: *Beautiful*  
-- **Type**: Adjective  
-- **Options**:
-  - A) สวย (Correct)
-  - B) เข้ม
-  - C) ช้า
-  - D) ใหญ่
-
-In this case, the correct answer is option A: *สวย*.
+| Name                      | ID         | Role                  |
+|---------------------------|------------|-----------------------|
+| Boonyawut Buthboon (Boss) | 650612088  | Backend               |
+| Natthapon Chanaveroj (Ton)| 650612082  | Frontend, Backend, Deployment, UX/UI Designer |
+| Ratchanon Chunsakunee (Non)| 650612099 | UX/UI Designer        |
+| Pariwat Wongnicha (Pun)   | 650612089  | Backend               |
+| Pubet Choompsueb (Kanoon) | 640610662  | UX/UI Designer        |
 
 ---
 
-## GitHub Repository
+## 🚀 **Techstack Overview**
 
-You can view the full source code for the **Translate IT!** game and contribute to its development on GitHub:
-
-[GitHub Repository - SCKagura/Com_Prog_Project_2.0](https://github.com/SCKagura/Com_Prog_Project_2.0)
-
-Feel free to fork the repository and experiment with adding new features, improving existing code, or helping with documentation.
-
----
-
-## Developer Tips
-
-### Customizing Questions
-To add or modify questions in the game, navigate to the `Full vocab/vocabandmeaning.txt` file within the repository. Each entry contains the word, its type (e.g., adjective, noun), and the four multiple-choice options.
-
-### Game Design Considerations
-The game is designed with simplicity in mind, allowing for easy additions of new questions and the potential to scale up by adding more levels or difficulty settings. You can also enhance the UI/UX design to make it more interactive and visually appealing.
+| **Category**              | **Technologies**                                       |
+|---------------------------|-------------------------------------------------------|
+| **Frontend**              | Vite, React, Tailwind CSS, DaisyUI, Zustand, React Query, Zod |
+| **Backend**               | Node.js, Express.js                                    |
+| **Realtime Communication**| Socket.io                                             |
+| **Authentication**        | Passport.js, JWT                                      |
+| **Database**              | PostgreSQL, Drizzle ORM                                |
+| **Deployment**            | Docker, Nginx                                         |
 
 ---
 
-## Contributing
+## 🏗️ **Backend Architecture**
+The backend architecture is modular and organized into the following components:
 
-If you have ideas to improve **Translate IT!**, such as adding new features, optimizing performance, or even translating the game into more languages, feel free to contribute! You can submit pull requests, report bugs, or suggest enhancements via the GitHub Issues page.
+- **Model**: User, Store, Reservation, Review, Favorite, Table.
+- **Controller**: Manages the business logic for each model.
+- **Router**: Handles HTTP routing for endpoints.
+- **Auth**: Implements authentication strategies (Google, Facebook, Local).
+- **Utils**: Environment configurations and utility functions.
+- **Config**: Database configuration and connection management.
+
+[API Documentation](http://10.10.182.248:5555)
 
 ---
+
+## 🗂️ **Database Schema**
+
+The database schema is designed to handle various entities efficiently. Major tables include:
+
+- **Users**: Stores user information such as name, email, role, and authentication IDs.
+- **Stores**: Handles store details, descriptions, and availability.
+- **Reservations**: Tracks user reservations with status and timestamps.
+- **Reviews**: Manages customer reviews with ratings.
+- **Favorites**: Tracks users' favorite stores.
+
+---
+
+## 🔐 **Authentication**
+![Authentication](Authentication.png)
+The application supports the following authentication methods:
+
+- **JWT**: Secure token-based authentication.
+- **OAuth 2.0**: Integration with Google and Facebook for user login.
+
+---
+
+## 🛡️ **Security Considerations**
+To ensure a secure and robust application, the following measures are implemented:
+
+- **Input Validation**: Protects against SQL injection and XSS attacks.
+- **Password Hashing**: Ensures secure storage of user passwords.
+- **Helmet**: Adds HTTP headers for enhanced security.
+- **CORS**: Restricts cross-origin requests.
+- **Rate Limiting**: Prevents brute force attacks.
+- **Sanitization**: Cleans input data to prevent injection attacks.
+- **HPP Protection**: Prevents HTTP parameter pollution.
+
+---
+
+## 🌟 **Highlights and Screenshots**
+
+### **1. Team Overview**
+![Team Overview](Team_Overview.png)
+
+### **2. Techstack**
+![Techstack Overview](Techstack_Overview.png)
+
+### **3. Backend Architecture**
+![Backend Architecture](Backend_Architecture.png)
+
+### **4. Database Schema**
+![Database Schema](Database_Schema.png)
+
+### **5. FrontEnd Design**
+![FrontEnd Design1](FrontendDesign1.png)
+![FrontEnd Design2](FrontendDesign2.png)
+---
+
+### **Project Code**
+[JongRhanRhao](https://github.com/JongRhanRhao)
+
+
+## 📝 **Conclusion**
+The Jongrhanrhao project demonstrates the integration of modern full-stack technologies to build a scalable and efficient web application. Its modular backend, dynamic frontend, and robust security features make it a strong foundation for future developments.
