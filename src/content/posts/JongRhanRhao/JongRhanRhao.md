@@ -7,12 +7,11 @@ tags: ["Web Development", "Full Stack", "Backend", "Frontend", "Authentication",
 category: Projects
 draft: false
 ---
-<!-- 
+
 
 ## 🎯 **Project Overview**
 The Jongrhanrhao project is a full-stack web application showcasing advanced features such as authentication, real-time communication, and database management. It integrates modern technologies for both frontend and backend to deliver a seamless user experience.
 
----
 
 ## 🧑‍💻 **Team Members**
 
@@ -24,7 +23,7 @@ The Jongrhanrhao project is a full-stack web application showcasing advanced fea
 | Pariwat Wongnicha (Pun)   | 650612089  | Backend               |
 | Pubet Choompsueb (Kanoon) | 640610662  | UX/UI Designer        |
 
----
+
 
 ## 🚀 **Techstack Overview**
 
@@ -37,7 +36,7 @@ The Jongrhanrhao project is a full-stack web application showcasing advanced fea
 | **Database**              | PostgreSQL, Drizzle ORM                                |
 | **Deployment**            | Docker, Nginx                                         |
 
----
+
 
 ## 🏗️ **Backend Architecture**
 The backend architecture is modular and organized into the following components:
@@ -49,7 +48,6 @@ The backend architecture is modular and organized into the following components:
 - **Utils**: Environment configurations and utility functions.
 - **Config**: Database configuration and connection management.
 
----
 
 ## 🗂️ **Database Schema**
 
@@ -61,7 +59,7 @@ The database schema is designed to handle various entities efficiently. Major ta
 - **Reviews**: Manages customer reviews with ratings.
 - **Favorites**: Tracks users' favorite stores.
 
----
+
 
 ## 🔐 **Authentication**
 ![Authentication](Authentication.png)
@@ -70,7 +68,7 @@ The application supports the following authentication methods:
 - **JWT**: Secure token-based authentication.
 - **OAuth 2.0**: Integration with Google and Facebook for user login.
 
----
+
 
 ## 🛡️ **Security Considerations**
 To ensure a secure and robust application, the following measures are implemented:
@@ -83,7 +81,7 @@ To ensure a secure and robust application, the following measures are implemente
 - **Sanitization**: Cleans input data to prevent injection attacks.
 - **HPP Protection**: Prevents HTTP parameter pollution.
 
----
+
 
 ## 🌟 **Highlights and Screenshots**
 
@@ -109,4 +107,4 @@ To ensure a secure and robust application, the following measures are implemente
 
 
 ## 📝 **Conclusion**
-The Jongrhanrhao project demonstrates the integration of modern full-stack technologies to build a scalable and efficient web application. Its modular backend, dynamic frontend, and robust security features make it a strong foundation for future developments. -->
+The Jongrhanrhao project demonstrates the integration of modern full-stack technologies to build a scalable and efficient web application. Its modular backend, dynamic frontend, and robust security features make it a strong foundation for future developments.
