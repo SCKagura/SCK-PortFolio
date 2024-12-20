@@ -7,83 +7,74 @@ tags: ["Game Development", "Java", "Frontend", "Backend", "Turn-Based Game"]
 category: Projects
 draft: false
 ---
+---
 
-> **Cover Image**: *Custom Design for UPBEAT Game*
+## 🎮 Project Overview
+
+**UPBEAT Game** is a turn-based strategy game where players manage resources, invest in territories, and compete to win. The system is developed using **Java** for the backend and **HTML/CSS** for the frontend design.
 
 ---
 
-## 🎮 **Project Overview**
+## 🔧 Technologies Used
 
-**UPBEAT Game** เป็นเกมวางแผนผลัดเทิร์นที่ผู้เล่นสามารถจัดการทรัพยากร, ลงทุนพื้นที่, และแข่งขันเพื่อเอาชนะเกม โดยระบบถูกพัฒนาด้วย **Java** สำหรับ Backend และออกแบบหน้าจอผู้เล่นด้วย **HTML/CSS** ในส่วนของ Frontend  
+| **Component**       | **Technologies**              |
+|---------------------|------------------------------|
+| **Backend**         | Java (OOP, Parser AST)       |
+| **Frontend**        | HTML, CSS                    |
+| **Testing**         | JUnit 5                      |
+| **Build Tools**     | Maven                        |
+| **Version Control** | Git & GitHub                 |
 
 ---
 
-## 🔧 **Technologies Used**
+## 👥 Team Members
 
-| Component             | Technologies                   |
-|-----------------------|--------------------------------|
-| **Backend**           | Java (OOP, Parser AST)         |
-| **Frontend**          | HTML, CSS                      |
-| **Testing**           | JUnit 5                        |
-| **Build Tools**       | Maven                          |
-| **Version Control**   | Git & GitHub                   |
+- **นายบุญญวุฒิ บุตรบุญ** (650612088)  
+- **นายพุฒิพงศ์ กุนาง** (650612095)  
+- **นายธีรภัทร์ ลำตาล** (650610772)
 
-## **Team members**
-*นายบุญญวุฒิ บุตรบุญ 650612088*
+---
 
-*นายพุฒิพงศ์ กุนาง 650612095*
-
-*นายธีรภัทร์ ลำตาล 650610772*
-
-
-## 🛠️ **Features**
+## 🛠️ Features
 
 ### **1. Dynamic Map Generation**
-- ระบบสร้างแผนที่ตามขนาดที่กำหนดในไฟล์ `config.txt` เช่น ขนาด `m x n`  
-- ข้อมูลแผนที่ถูกจัดเก็บในคลาส `Region` โดยมีสถานะต่าง ๆ เช่น:  
-   - **ตำแหน่ง**: `m` (แถว), `n` (คอลัมน์)  
-   - **เงินฝาก**: `deposit`  
-   - **เจ้าของพื้นที่**: `Player`  
-   - **ดอกเบี้ย**: `interest`  
+- Map size is defined in the `config.txt` file (e.g., `m x n` dimensions).
+- Map data is stored in the `Region` class with attributes such as:
+  - **Position**: `m` (row), `n` (column)
+  - **Deposit**: `deposit`
+  - **Owner**: `Player`
+  - **Interest**: `interest`
 
----
+### **2. Player Actions**
+Players input commands through a **Parser** that generates an Abstract Syntax Tree (AST) for command processing:
 
-### **2. Player Actions**  
-ผู้เล่นสามารถป้อนคำสั่งผ่าน **Parser** โดยระบบจะวิเคราะห์คำสั่งและสร้าง AST (Abstract Syntax Tree):  
+| **Command** | **Description**                  |
+|-------------|----------------------------------|
+| `move`      | Move in a specified direction    |
+| `invest`    | Invest in a territory            |
+| `collect`   | Collect returns from investments |
+| `attack`    | Attack opponent’s territory     |
+| `done`      | End the player’s turn           |
 
-| **คำสั่ง** | **การทำงาน**                      |
-|------------|----------------------------------|
-| `move`     | เคลื่อนที่ไปในทิศทางที่กำหนด         |
-| `invest`   | ลงทุนในพื้นที่เพิ่มเงินฝาก          |
-| `collect`  | เก็บผลตอบแทนจากการลงทุน            |
-| `attack`   | โจมตีพื้นที่ของฝ่ายตรงข้าม          |
-| `done`     | จบเทิร์นของผู้เล่น                 |
-
----
-
-### **3. Interest Calculation**  
-
-ดอกเบี้ยคำนวณตามสูตร:  
+### **3. Interest Calculation**
+Interest is calculated using the following formula:
 $$
-\text{interest} = \text{base interest rate} \times \log_{10}
-(\text{deposit}) \times \ln(\text{turn})
-$$  
-ระบบนี้ช่วยให้ผู้เล่นต้องวางแผนการลงทุนและบริหารเงินฝากอย่างรอบคอบ  
+\text{interest} = \text{base interest rate} \times \log_{10}(\text{deposit}) \times \ln(\text{turn})
+$$
+This encourages strategic planning for investment and resource management.
+
+### **4. Frontend User Interface**
+- **Menu Screen**: Main menu
+- **Gameplay Screen**: Displays game state and map
+- **Config Screen**: Adjust map size and game parameters
 
 ---
 
-### **4. Frontend User Interface**  
-- **Menu Screen**: หน้าเมนูหลัก  
-- **Game Play Screen**: แสดงสถานะเกมและแผนที่  
+## 🧪 Testing
 
-- **Config Screen**: ตั้งค่าขนาดแผนที่และพารามิเตอร์เกม  
-
-
-
-### 🧪 **Testing**
- **1. Configuration Test :**
-ตรวจสอบการอ่านค่าพารามิเตอร์จากไฟล์ config.txt
-```
+### **1. Configuration Test**
+Tests reading parameters from the `config.txt` file:
+```java
 @Test
 public void testReadConfiguration() {
     Configuration config = Configuration.instance();
@@ -92,9 +83,10 @@ public void testReadConfiguration() {
     assertEquals(10000, config.init_budget);
 }
 ```
- **2. Player Move Test :**
-ทดสอบคำสั่ง move สำหรับผู้เล่น:
-```
+
+### **2. Player Move Test**
+Tests the `move` command for a player:
+```java
 @Test
 public void testPlayerMove() {
     Player player = new Player(1);
@@ -105,60 +97,78 @@ public void testPlayerMove() {
     assertEquals(2, player.getY());
 }
 ```
-### 📸 **Screenshots**
-**1. Menu Screen**
-![ALT Text](UPBEAT_MainScreen.png)
-**2. Game Play Screen**
-![ALT Text](UPBEAT_Gameplay.png)
-**3. Config Screen**
-![ALT Text](UPBEAT_ConfigScreen.png)
 
+---
 
-### 🚀 **How to Run the Project**
+## 📸 Screenshots
 
-## **Backend Setup**
-**1.Clone โปรเจคจาก GitHub:**
-```
+### **1. Menu Screen**
+![Menu Screen](UPBEAT_MainScreen.png)
+
+### **2. Gameplay Screen**
+![Gameplay Screen](UPBEAT_Gameplay.png)
+
+### **3. Config Screen**
+![Config Screen](UPBEAT_ConfigScreen.png)
+
+---
+
+## 🚀 How to Run the Project
+
+### **Backend Setup**
+
+1. Clone the project from GitHub:
+```bash
 git clone https://github.com/SCKagura/OOP-Project-Group-16.git
 cd OOP-Project-Group-16
 ```
 
-**2.Build และรันโปรเจค:**
-```
+2. Build and run the project:
+```bash
 mvn clean install
 java -jar target/UPBEATGame.jar
 ```
 
-## Frontend Setup
-เปิดไฟล์ index.html ในเบราว์เซอร์
-ตรวจสอบการเชื่อมต่อกับ Backend
+### **Frontend Setup**
+Open the `index.html` file in a web browser and ensure the connection to the backend is established.
 
-### 🎯**Challenges and Solutions**
-**1. การเชื่อมต่อ Frontend กับ Backend**
-ปัญหา: ต้องเชื่อม API เพื่อรับส่งข้อมูลเกมระหว่าง Frontend และ Backend
-แนวทางแก้ไข: เตรียม RESTful API สำหรับการส่งคำสั่งผู้เล่นและสถานะเกม
+---
 
-**2. Parser Logic**
-ปัญหา: รองรับคำสั่งที่ซับซ้อนผ่าน AST
-แนวทางแก้ไข: ใช้ Abstract Syntax Tree (AST) ในการวิเคราะห์และประมวลผลคำสั่ง
+## 🎯 Challenges and Solutions
 
-### 🔮 **Future Improvements**
-1.เชื่อมต่อ Frontend กับ Backend ผ่าน API
+### **1. Frontend-Backend Connection**
+**Challenge**: Integrating API for game data exchange between frontend and backend.  
+**Solution**: Designed RESTful APIs to handle player commands and game states.
 
-2.เพิ่มระบบ AI Opponent สำหรับเล่นคนเดียว
+### **2. Parser Logic**
+**Challenge**: Supporting complex commands through AST.
+**Solution**: Implemented an Abstract Syntax Tree (AST) for efficient command parsing and execution.
 
-3.พัฒนา Multiplayer Mode รองรับผู้เล่นหลายคน
+---
 
-4.ปรับปรุง UI/UX ให้มีความโต้ตอบผ่าน JavaScript
+## 🔮 Future Improvements
 
-### **Project Paper**
-[Project Paper](/src/assets/Files/UPBEAT/Final_Project_Report_UPBEAT.pdf)
+1. Integrate the frontend and backend through APIs.
+2. Add an AI opponent for single-player mode.
+3. Develop a multiplayer mode for multiple players.
+4. Enhance UI/UX with interactive JavaScript features.
 
-### 🔗 **GitHub Repository**
-[Github Repo](https://github.com/SCKagura/OOP-Project-Group-16.git)
+---
 
-### 👨‍💻 **Contributing**
-หากสนใจพัฒนาหรือเพิ่มฟีเจอร์ใหม่ สามารถ Fork และ Pull Request หรือรายงานปัญหาได้ที่ GitHub Issues
+## 📄 Project Paper
+[Final Project Report (PDF)](/src/assets/Files/UPBEAT/Final_Project_Report_UPBEAT.pdf)
 
-### 📝 **Conclusion**
-โปรเจค UPBEAT Game แสดงให้เห็นถึงการออกแบบระบบเกมที่ชัดเจน โดยใช้หลักการ OOP และมีโครงสร้างที่ยืดหยุ่น รองรับการพัฒนาฟีเจอร์ในอนาคต ทั้ง Backend และ Frontend ทำให้โปรเจคนี้มีความน่าสนใจและพร้อมใช้งานสำหรับการขยายต่อ
+---
+
+## 🔗 GitHub Repository
+[GitHub Repo](https://github.com/SCKagura/OOP-Project-Group-16.git)
+
+---
+
+## 👨‍💻 Contributing
+Interested in contributing? Fork the repository and create a pull request or report issues via GitHub Issues.
+
+---
+
+## 📝 Conclusion
+The UPBEAT Game project showcases a clear system design leveraging OOP principles and a flexible structure. It is prepared for future feature enhancements in both backend and frontend, making this project robust and ready for scalability.
