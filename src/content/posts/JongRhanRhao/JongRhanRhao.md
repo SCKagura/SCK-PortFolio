@@ -26,7 +26,7 @@ The Jongrhanrhao project is a full-stack web application showcasing advanced fea
 
 ---
 
-<!-- ## 🚀 **Techstack Overview** -->
+## 🚀 **Techstack Overview**
 
 | **Category**              | **Technologies**                                       |
 |---------------------------|-------------------------------------------------------|
@@ -39,7 +39,7 @@ The Jongrhanrhao project is a full-stack web application showcasing advanced fea
 
 ---
 
-<!-- ## 🏗️ **Backend Architecture** -->
+## 🏗️ **Backend Architecture**
 The backend architecture is modular and organized into the following components:
 
 - **Model**: User, Store, Reservation, Review, Favorite, Table.
@@ -51,7 +51,7 @@ The backend architecture is modular and organized into the following components:
 
 ---
 
-<!-- ## 🗂️ **Database Schema** -->
+## 🗂️ **Database Schema**
 
 The database schema is designed to handle various entities efficiently. Major tables include:
 
@@ -63,7 +63,7 @@ The database schema is designed to handle various entities efficiently. Major ta
 
 ---
 
-<!-- ## 🔐 **Authentication** -->
+## 🔐 **Authentication**
 ![Authentication](Authentication.png)
 The application supports the following authentication methods:
 
@@ -72,7 +72,7 @@ The application supports the following authentication methods:
 
 ---
 
-<!-- ## 🛡️ **Security Considerations** -->
+## 🛡️ **Security Considerations**
 To ensure a secure and robust application, the following measures are implemented:
 
 - **Input Validation**: Protects against SQL injection and XSS attacks.
@@ -108,5 +108,5 @@ To ensure a secure and robust application, the following measures are implemente
 <!-- [JongRhanRhao](https://github.com/JongRhanRhao) -->
 
 
-<!-- ## 📝 **Conclusion** -->
+## 📝 **Conclusion**
 The Jongrhanrhao project demonstrates the integration of modern full-stack technologies to build a scalable and efficient web application. Its modular backend, dynamic frontend, and robust security features make it a strong foundation for future developments. -->
